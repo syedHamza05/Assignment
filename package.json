@@ -1,0 +1,38 @@
+{
+    "name": "assignment",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "export NODE_ENV=local && node index.js",
+        "dev": "SET NODE_ENV=development && nodemon index.js",
+        "test": "SET NODE_ENV=qa && nodemon index.js",
+        "beta": "SET NODE_ENV=beta && nodemon index.js",
+        "live": "SET NODE_ENV=live && nodemon index.js",
+        "local": "SET NODE_ENV=local && node index.js",
+        "pm2:dev": "SET NODE_ENV=development && pm2 start index.js --name DEV_SOCKET --namespace development",
+        "pm2:test": "SET NODE_ENV=qa && pm2 start index.js --name TEST_SOCKET --namespace qa",
+        "pm2:beta": "SET NODE_ENV=beta && pm2 start index.js --name BETA_SOCKET --namespace beta",
+        "pm2:live": "SET NODE_ENV=live && pm2 start index.js --name LIVE_SOCKET --namespace live"
+    },
+    "author": "Syed Hamza",
+    "license": "MIT",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "bluebird": "^3.7.2",
+        "body-parser": "^1.19.0",
+        "connect-multiparty": "^2.2.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.1",
+        "handlebars": "^4.7.6",
+        "joi": "^14.3.1",
+        "jsonwebtoken": "^8.5.1",
+        "moment": "^2.29.2",
+        "mongoose-auto-increment": "^3.0.1",
+        "multer": "^1.4.4",
+        "nodemailer": "^6.7.5",
+        "winston": "^3.3.3",
+        "winston-daily-rotate-file": "^4.5.2"
+    }
+}
